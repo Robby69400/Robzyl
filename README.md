@@ -5,6 +5,7 @@
 
 <h2><a href="https://www.youtube.com/@robby_69400" rel="nofollow">🗲Youtube</a></h2>
 <h2><a href="https://t.me/k5robby69">🗲Telegram </a></h2>
+Désormais le code source sera accessible sur demande. Contactez moi sur le Telegram.
 
 # **Manuel Robzyl V5.3 - Firmware Quansheng UV-K5**
 
