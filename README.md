@@ -7,7 +7,7 @@
 <h2><a href="https://t.me/k5robby69">🗲Telegram </a></h2>
 Désormais le code source sera accessible sur demande. Contactez moi sur le Telegram.
 
-# **Manuel Robzyl V5.3 - Firmware Quansheng UV-K5**
+# **Manuel Robzyl V5.4 - Firmware Quansheng UV-K5**
 
 ## Introduction
 
@@ -19,33 +19,13 @@ Les liens vers les différentes ressources sont accessibles en fin de document (
 
 **Le domaine de la radio est réglementé, chacun est responsable de l’utilisation qu’il fait de sa radio.**
 
-## Nouveautés V5.3
-- Bandes : Ajout des versions KO TU et CZ (KO perso, Turquie et la République Tchèque). Le code "origine" la bande apparait à l'écran.
-- Spectre : 
-    * Simplification du nouveau squelch, on ne règle plus que le trigger up. 
-    * Optimisation de l’auto-zoom. 
-    * Il est permis de configurer l’affichage au dessus du graphique selon 5 formats 
-      * rien
-      * 1 ligne grande fréquence 
-      * 1 ligne petite fréquence et ctcss ou DCS
-      * 2 lignes: ajout mode et canal
-      * 3 lignes: ajout dernière fréquence reçue.
-    * Améliorations du SpectrumDelay : le timer s'exécute sur l’écran du spectre. Et tous les réglages restent actifs durant ce temps (step, modul., BL, …).
-    * L’écran d’historique évolue de manière dynamique, balayable avec les touches ^/v. Touche M pour se positionner en écoute sur une fréquence listée.
-    * L’écran de monitoring d’écoute (M) permet de régler plus de registres techniques pour des réglages avancés. Ces valeurs sont mémorisées à l'enregistrement (touche M pour passer en édition, ^/v pour régler).
-    * Mode Fréquence : renommé FQ (au lieu de FR)
-- Paramètres Spectre : Nouvelle entrée de menu DEFAUT PARAMS (presser 3 pour valider). Réinitialisation des paramètres en mémoire et registres. **A faire à chaque nouvelle version.**
-- Mode MR/VFO : 
-    * Dans le Menu M, certains pas du menu caché réapparaissent en visible par défaut.
-    * Modification de l'accès aux menus cachés : presser uniquement SIDE KEY 1 au démarrage
+## Nouveautés V5.4.1
 
-
-## Nouveautés V5.2
-
-- Passage en simple VFO (gain de place et simplification interface)
-- Spectre : Nouvelle gestion du squelch, ajout nouvel écran sans histogramme, nouveaux menus PTT, FStart/Stop, Step, ListenBw et Modulation).
-- Spectre : Historique des fréquences à repenser suite aux travaux sur le squelch.
-- Nouveaux Roger Bips 😊
+gestion de 400 canaux avec la version 512k, nécessite un changement d'EEPROM.
+Correction touche 
+Led verte ne s'allume plus si backlight <6
+Affichage AFC, permet de vérifier le réglage fin de fréquence
+spectrum delay sauvegardé et le son coupé sans signal
 
 ## Démarrage
 
