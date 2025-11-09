@@ -6,12 +6,12 @@
 # 0x03E9 to 0x1DFF VFO params
 # 0x1F00 to 0x2000 calibration
 
-# 0x2000 to 0x38FF channels freqs and params 16 bytes
-# 0x3900 to 0x3A8F chanel attributes 1 byte
+# 0x2000 to 0x5E7F channels freqs and params 16 bytes
+# 0x5E80 to 0x6267 channel attributes 1 byte
 
-# 0x3A90 to 0x538F channels names 16 bytes
-# 0x5390 to 0x55E8 history record 6bytes (chirp read only see PROG_SIZE)
-
+# 0x6280 to 0xA0FF channels names 16 bytes
+# 0xA100 to XXXX history record 6bytes (chirp read only see PROG_SIZE)
+# MEM_SIZE 0xA100
 
 import struct
 import logging
@@ -38,11 +38,11 @@ DRIVER_VERSION = "Quansheng UV-K5/K6/5R driver (c)"
 VALEUR_COMPILER = "ENABLE"
 
 MEM_FORMAT = """
-#seekto 0x3900;
+#seekto 0x5E80;
 struct {
 u8 scanlist:4,
 band:4;
-} ch_attr[400];
+} ch_attr[1000];
 
 #seekto 0x2000;
 struct {
@@ -63,12 +63,12 @@ struct {
   u8 __UNUSED2;
   u8 step;
   u8 scrambler;
-} Channel[400];
+} Channel[1000];
 
-#seekto 0x3A90;
+#seekto 0x6280;
 struct {
 char name[16];
-} Channelname[400];
+} Channelname[1000];
 
 #seekto 0xe70;
 u8 unused1;
@@ -319,11 +319,11 @@ VOICE_LIST = ["OFF", "Chinese", "English"]
 # ACTIVE CHANNEL
 TX_VFO_LIST = ["A", "B"]
 REMENDOFTALK_LIST = ["OFF", "Morse", "Mario"]
-RTE_LIST = ["OFF", "100ms", "200ms", "300ms", "400ms",
+RTE_LIST = ["OFF", "100ms", "200ms", "300ms", "1000ms",
             "500ms", "600ms", "700ms", "800ms", "900ms", "1000ms"]
 
-MEM_SIZE = 0x538F   # size of all memory
-PROG_SIZE = 0x538F  # size of the memory that we will write
+MEM_SIZE = 0xA100   # size of all memory
+PROG_SIZE = 0xA100  # size of the memory that we will write
 MEM_BLOCK = 0x80    # largest block of memory that we can reliably write
 BANDS_WIDE = {
         0: [ 14.0, 108.0],
@@ -681,7 +681,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 
         rf.valid_skips = [""]
 
-        rf.memory_bounds = (1, 400)
+        rf.memory_bounds = (1, 1000)
         # This is what the BK4819 chip supports
         # Will leave it in a comment, might be useful someday
         rf.valid_bands = [(14000000,  630000000),
@@ -837,7 +837,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         # We'll also look at the Channel attributes if a memory has them
         tmpscn = SCANLIST_LIST[0]
 
-        if ch_num < 400:
+        if ch_num < 1000:
             _mem3 = self._memobj.ch_attr[ch_num]
             # scanlists
             temp_val = _mem3.scanlist
