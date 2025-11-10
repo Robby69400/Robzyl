@@ -1,31 +1,36 @@
 ># [**Translate 🌐**](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/Robby69400/Robzyl_K5/)
 # Firmware Quansheng UV-K5 - Robzyl
-## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personaliser, voir le manuel.
-### 🙏 Many thanks to Zylka, Kolyan, Karina, Toni, Yves31 and Francois87 🙏
+## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personaliser, me contacter sur Telegram.
+### 🙏 Many thanks to Zylka, Kolyan, Karina, Toni, Yves31 and Francois87
 
 <h2><a href="https://www.youtube.com/@robby_69400" rel="nofollow">🗲Youtube</a></h2>
 <h2><a href="https://t.me/k5robby69">🗲Telegram </a></h2>
 Désormais le code source sera accessible sur demande. Contactez moi sur le Telegram.
 
-# **Manuel Robzyl V5.4 - Firmware Quansheng UV-K5**
+# **Manuel Robzyl - Firmware Quansheng UV-K5**
 
 ## Introduction
 
 Ce firmware, fork de NUNU de NTOIVOLA, est caractérisé par ses multiples fonctions de réception mettant en œuvre l’analyseur de spectre capable de traiter jusqu’à 160 canaux par seconde.
 
-Les liens vers les différentes ressources sont accessibles en fin de document (GitHub, Youtube, Telegram, etc.).
-
-## Avertissements et responsabilités
+## ⚠️ Avertissements et responsabilités
 
 **Le domaine de la radio est réglementé, chacun est responsable de l’utilisation qu’il fait de sa radio.**
 
-## Nouveautés V5.4.1
+## 🔥 Nouveautés V5.4.13
 
-gestion de 400 canaux avec la version 512k, nécessite un changement d'EEPROM.
+gestion de 1000 canaux avec la version 512k, nécessite un changement d'EEPROM.
 Correction touche 
 Led verte ne s'allume plus si backlight <6
 Affichage AFC, permet de vérifier le réglage fin de fréquence
 spectrum delay sauvegardé et le son coupé sans signal
+100 valeurs d'historique / blacklist stockables en EEPROM sur version 512k
+nouveaux paramètres dans le menu [5]:
+- Max listen Time: temps maximum d'écoute d'une fréquence reçue.
+- RX_Backlight_ON permet d'activer le backlight en réception spectre
+- CLEAR HISTORY: efface l'historique de l'EEPROM (version 512k)
+- FREE RAM: indique la mémoire disponible
+
 
 ## Démarrage
 
@@ -107,14 +112,19 @@ Ecran principal :
 
 - RSSI Delay : temps de capture du RSSI en ms. Une valeur trop faible peut faire rater des signaux.
 - SpectrumDelay : Permet de définir le temps d’attente sur un signal à l’écoute et retombé sous le squelch. Si la valeur est à l’infini : pressez la touche Exit pour quitter l’écran d’écoute.
+- Max listen Time: temps maximum d'écoute d'une fréquence reçue.
 - PTT (Option de passage en émission) : LAST RECEIVED = dernière fréquence entendue, LAST VFO FREQ = fréquence en VFO, NINJA MODE : Mode de communication expérimental par saut de fréquence à chaque PTT entre 2 K5 utilisant le spectre en mode Ninja sur une Scanlist commune. Voir vidéo sur YouTube.
 - Fstart/Fstop : paramétrage des fréquence ^/v en mode FR.
 - Step : paramétrage de la canalisation des fréquences en mode FR.
 - ListenBW : paramétrage de la largeur de la bande d’écoute.
 - Modulation : FM/AM/USB
 - DEFAUT PARAMS et touche 3 pour réinitialiser les paramètres du spectre ainsi que les registres.
+- RX_Backlight_ON permet d'activer le backlight en réception spectre
+- Freq counting: l'historique compte le nombre de réceptions d'une fréquence, Time counting compte le temps écoulé en réception de la fréquence
+- CLEAR HISTORY: efface l'historique de l'EEPROM (version 512k)
+- FREE RAM: indique la mémoire disponible
 
-### Spectre en vue simplifiée
+### Vue simplifiée
 
 <img width="512" height="320" alt="screenshot_2025-10-05_14-34-58-915Z" src="https://github.com/user-attachments/assets/e8695e3a-1f62-4036-8a89-6981e7c63f9c" />
 
@@ -131,6 +141,9 @@ Le monitor se lance avec la touche M sur une fréquence en écoute.
 <img width="512" height="320" alt="screenshot_2025-10-05_14-38-50-421Z" src="https://github.com/user-attachments/assets/5627c391-008e-4442-af0d-c41065b5d612" />
 
 L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, touche M pour passer en monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
+La touche 7 permet de sauvegarder l'historique en EEPROM (version 512k)
+La touche 8 permet d'effacer l'historique en mémoire, mais pas en EEPROM
+
 
 ### Conseils
 
@@ -166,7 +179,7 @@ Les SL choisies apparaissent avec un symbole \*. Puis faire Exit pour lancer le 
   - L’entendue des fréquences basse/haute peut être ajustée dans le menu via les paramètres FStart/FStop. Sur ces paramètres faire 1 pour accéder à la saisie et M pour valider (touche \* pour la virgule).
   - Ajuster votre squelch.
 
-## Spectre sur les Bandes Prédéfinis (mode BD)
+## Spectre sur les Bandes Prédéfinies (mode BD)
 
 - Fonction : Permet d’analyser en spectre des bandes prédéfinies (ex. PMR, CB, AERO, HAM, etc.).
 - Lancement : Depuis le mode VFO/MR, touche F+6
@@ -211,9 +224,9 @@ Ensuite le menu touche 4 permet de choisir les bandes à analyser de la même ma
 Oui : Affichage menus cachés, menu No 48, valeur PMR446 ONLY.
 
 - Le firmware est-il compatible avec les mod SI4732 ? :
-Non, mais ce sera peut-être envisageable.
+Non
 
 - Le firmware est-il compatible avec les mod EEPROM ? :
-Non, mais c’est une évolution possible.
+Oui 2 versions existent: 8k et 512k pour les K5 modifiés
 
 
