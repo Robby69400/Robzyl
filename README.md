@@ -27,7 +27,7 @@ https://github.com/Robby69400/Robzyl_K5/edit/main/README.md
 Basculez entre les modes de balayage de fréquence, de plage, de bande et de liste – ultra-flexible pour toutes les situations !
 
 🎚️ Sélection automatique de la modulation
-Lors du balayage des bandes ou des listes, la modulation est automatiquement définie (FM/AM/QSB) en fonction des informations du canal ou de la bande enregistrée. Plus besoin de commutation manuelle !
+Lors du balayage des bandes ou des listes, la modulation est automatiquement définie (FM/AM/SSB) en fonction des informations du canal ou de la bande enregistrée. Plus besoin de commutation manuelle !
 
 📊 Squelch dynamique
 Le squelch est basé sur la détection de crête et ignore les variations du bruit de fond.
