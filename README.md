@@ -12,6 +12,7 @@ Désormais le code source sera accessible sur demande. Contactez moi sur le Tele
 ## Introduction
 
 Ce firmware, fork de NUNU de NTOIVOLA, est caractérisé par ses multiples fonctions de réception mettant en œuvre l’analyseur de spectre capable de traiter jusqu’à 160 canaux par seconde.
+Actuellement il ne fonctionne que pour les K5/K6 en V1.
 
 ## ⚠️ Avertissements et responsabilités
 
