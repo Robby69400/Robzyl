@@ -17,7 +17,44 @@ Ce firmware, fork de NUNU de NTOIVOLA, est caractérisé par ses multiples fonct
 
 **Le domaine de la radio est réglementé, chacun est responsable de l’utilisation qu’il fait de sa radio.**
 
-## 🔥 Nouveautés V5.4.13
+## Firmware Robzyl – Principales fonctionnalités pour le Quansheng K5 ! ##
+
+https://github.com/Robby69400/Robzyl_K5/edit/main/README.md
+
+🔥 Support des extensions EEPROM: permet de gérer 1000 canaux
+
+🔍 Modes de balayage multiples
+Basculez entre les modes de balayage de fréquence, de plage, de bande et de liste – ultra-flexible pour toutes les situations !
+
+🎚️ Sélection automatique de la modulation
+Lors du balayage des bandes ou des listes, la modulation est automatiquement définie (FM/AM/QSB) en fonction des informations du canal ou de la bande enregistrée. Plus besoin de commutation manuelle !
+
+📊 Squelch dynamique
+Le squelch est basé sur la détection de crête et ignore les variations du bruit de fond.
+
+⛔ Fréquences à ignorer
+Évitez les fréquences gênantes ou bruyantes lors des balayages futurs d'une simple pression.
+
+📜 Liste d'historique défilante
+Consultez toutes les fréquences récemment balayées, y compris le nombre de détections ou la durée et les noms des mémoires correspondantes. Revenez facilement à n'importe quelle fréquence !
+Enregistrement en EEPROM si extension disponible.
+Affiche le nom du canal dans l'historique si la fréquence correspond à une mémoire enregistrée.
+
+✅ 15 listes de balayage et 32 ​​bandes – Activez/désactivez visuellement vos bandes/listes, avec des indicateurs en forme d'étoile. Des listes de bandes sont disponibles pour plusieurs pays, mais peuvent être personnalisées sur demande.
+
+📡 Transmission depuis le spectre – Appuyez sur PTT pendant le balayage pour émettre sur la fréquence sélectionnée, puis retour automatique au balayage.
+
+🕒 Réglage DelayRssi – Ajustez la vitesse de balayage en réglant le délai avant la mesure du RSSI.
+Réglage SpectrumDelay – Ajustez le délais avant relance du balayage.
+Réglage MaxListenTime – Ajustez le temps maximum d'écoute avant relance du balayage.
+
+💾 Sauvegarde/Chargement EEPROM – Paramètres de balayage, bandes, niveaux de squelch – tout est sauvegardé et chargé au démarrage.
+
+😎 Mode Ninja : saut de fréquence sur votre K5.
+😜 Bips Mario, Pac-Man, R2D2 et Roger
+
+
+## 🔥 Nouveautés V5.5.0
 
 gestion de 1000 canaux avec la version 512k, nécessite un changement d'EEPROM.
 Correction touche 
