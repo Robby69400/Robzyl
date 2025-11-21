@@ -178,10 +178,10 @@ Le monitor se lance avec la touche M sur une fréquence en écoute.
 
 <img width="512" height="320" alt="screenshot_2025-10-05_14-38-50-421Z" src="https://github.com/user-attachments/assets/5627c391-008e-4442-af0d-c41065b5d612" />
 
-L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, touche M pour passer en monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
+L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, on passe en frequency lock et on peut écouter directement les fréquences stockées (comme une radio FM qui balaye et enregistre des fréquences) 
+touche M pour passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
 La touche 7 permet de sauvegarder l'historique en EEPROM (version 512k)
 La touche 8 permet d'effacer l'historique en mémoire, mais pas en EEPROM
-
 
 ### Conseils
 
