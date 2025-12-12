@@ -42,7 +42,7 @@ MEM_FORMAT = """
 struct {
 u8 scanlist:4,
 band:4;
-} ch_attr[1000];
+} ch_attr[999];
 
 #seekto 0x2000;
 struct {
@@ -63,12 +63,12 @@ struct {
   u8 __UNUSED2;
   u8 step;
   u8 scrambler;
-} Channel[1000];
+} Channel[999];
 
 #seekto 0x6280;
 struct {
 char name[16];
-} Channelname[1000];
+} Channelname[999];
 
 #seekto 0xe70;
 u8 unused1;
@@ -680,7 +680,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
 
         rf.valid_skips = [""]
 
-        rf.memory_bounds = (1, 1000)
+        rf.memory_bounds = (1, 999)
         # This is what the BK4819 chip supports
         # Will leave it in a comment, might be useful someday
         rf.valid_bands = [(14000000,  630000000),
@@ -836,7 +836,7 @@ class UVK5Radio(chirp_common.CloneModeRadio):
         # We'll also look at the Channel attributes if a memory has them
         tmpscn = SCANLIST_LIST[0]
 
-        if ch_num < 1000:
+        if ch_num < 999:
             _mem3 = self._memobj.ch_attr[ch_num]
             # scanlists
             temp_val = _mem3.scanlist
