@@ -1,7 +1,7 @@
 ># [**Translate 🌐**](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/Robby69400/Robzyl_K5/)
 # Firmware Quansheng UV-K5 - Robzyl
-## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personaliser, me contacter sur Telegram.
-### 🙏 Many thanks to Zylka, Kolyan, Karina, Toni, Yves31 and Francois87
+## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: International, France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personaliser, me contacter sur Telegram.
+### 🙏 Many thanks to Zylka, Kolyan, Iggy, Toni, Yves and Francois
 
 <h2><a href="https://www.youtube.com/@robby_69400" rel="nofollow">🗲Youtube</a></h2>
 <h2><a href="https://t.me/k5robby69">🗲Telegram </a></h2>
@@ -13,16 +13,19 @@ Désormais le code source sera accessible sur demande. Contactez moi sur le Tele
 
 Ce firmware, fork de NUNU de NTOIVOLA, est caractérisé par ses multiples fonctions de réception mettant en œuvre l’analyseur de spectre capable de traiter jusqu’à 160 canaux par seconde.
 Actuellement il ne fonctionne que pour les K5/K6 en V1.
+## ⚠️En cas de problème vous pouvez utiliser la procédure de restauration en bas.
 
 ## ⚠️ Avertissements et responsabilités
 
 **Le domaine de la radio est réglementé, chacun est responsable de l’utilisation qu’il fait de sa radio.**
 
+
 ## Firmware Robzyl – Principales fonctionnalités pour le Quansheng K5 ! ##
 
 https://github.com/Robby69400/Robzyl_K5/edit/main/README.md
 
-🔥 Support des extensions EEPROM: permet de gérer 1000 canaux
+🔥 Support des extensions EEPROM: permet de gérer 1000 canaux. 
+## ⚠️ Attention n'utiliser la version 512k que si vous avez plus que 8Ko de mémoire EEPROM!
 
 🔍 Modes de balayage multiples
 Basculez entre les modes de balayage de fréquence, de plage, de bande et de liste – ultra-flexible pour toutes les situations !
@@ -255,6 +258,19 @@ De la même manière qu’en mode SL, il est demandé à la 1ère utilisation de
 Ensuite le menu touche 4 permet de choisir les bandes à analyser de la même manière que le menu en mode SL :
 
 <img width="512" height="320" alt="screenshot_2025-10-05_14-44-35-765Z" src="https://github.com/user-attachments/assets/938d3712-3cd3-4588-8c66-cb17d3016c6f" />
+
+## Procédure de restauration
+- Utiliser l'archive Rollback.zip
+- Commencez par flasher le fichier (ROLLBACK.bin) en mode simple. 
+- Après le flashage, éteignez la radio, maintenez le bouton 7 enfoncé, puis rallumez-la. 
+- Attendez que la mémoire soit effacée.
+
+- Flashez ensuite le firmware d'origine (K6 v3.00.19_publish.bin). 
+- Après le flashage, effectuez une réinitialisation complète via le menu. 
+- Enfin, flashez le fichier de calibration (my_calibration.bin) (allumez la radio en mode simple). 
+- Utilisez k5prog.
+
+
 
 ## FAQ
 
