@@ -1,6 +1,6 @@
 ># [**Translate 🌐**](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/Robby69400/Robzyl_K5/)
 # Firmware Quansheng UV-K5 - Robzyl
-## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: International, France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personaliser, me contacter sur Telegram.
+## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: International, France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personnaliser, me contacter sur Telegram.
 ### 🙏 Many thanks to Zylka, Kolyan, Iggy, Toni, Yves and Francois
 
 <h2><a href="https://www.youtube.com/@robby_69400" rel="nofollow">🗲Youtube</a></h2>
@@ -22,9 +22,9 @@ Actuellement il ne fonctionne que pour les K5/K6 en V1.
 
 ## Firmware Robzyl – Principales fonctionnalités pour le Quansheng K5 ! ##
 
-https://github.com/Robby69400/Robzyl_K5/edit/main/README.md
+https://github.com/Robby69400/Robzyl/blob/main/README.md
 
-🔥 Support des extensions EEPROM: permet de gérer 1000 canaux. 
+🔥 Support des extensions EEPROM: permet de gérer 1000 canaux (nécéssite le driver chirp "512k"). 
 ## ⚠️ Attention n'utiliser la version 512k que si vous avez plus que 8Ko de mémoire EEPROM!
 
 🔍 Modes de balayage multiples
@@ -60,13 +60,14 @@ Réglage MaxListenTime – Ajustez le temps maximum d'écoute avant relance du b
 
 ## 🔥 Nouveautés V5.5.0
 
-gestion de 1000 canaux avec la version 512k, nécessite un changement d'EEPROM.
-Correction touche 
-Led verte ne s'allume plus si backlight <6
-Affichage AFC, permet de vérifier le réglage fin de fréquence
-spectrum delay sauvegardé et le son coupé sans signal
-100 valeurs d'historique / blacklist stockables en EEPROM sur version 512k
-nouveaux paramètres dans le menu [5]:
+Gestion de 1000 canaux avec la version 512k, nécessite un changement d'EEPROM.
+Correction touche.
+Led verte ne s'allume plus si backlight <6.
+Affichage AFC (Automatic Frequency Control), permet de vérifier le réglage fin de fréquence.
+Spectrum delay sauvegardé et le son coupé sans signal.
+100 valeurs d'historique / blacklist stockables en EEPROM sur version 512k.
+
+Nouveaux paramètres dans le menu [5]:
 - Max listen Time: temps maximum d'écoute d'une fréquence reçue.
 - RX_Backlight_ON permet d'activer le backlight en réception spectre
 - CLEAR HISTORY: efface l'historique de l'EEPROM (version 512k)
@@ -76,17 +77,17 @@ nouveaux paramètres dans le menu [5]:
 ## Démarrage
 
 - **Installation du firmware :**
-    * Télécharger la dernière version sur le GitHub (lien en fin de doc).
+    * Télécharger la dernière version sur le GitHub (lien en fin de doc). Attention à la version version 8k et 512k selon votre EEPROM.
     * Munissez-vous du câble de programmation USB compatible avec le poste.
     * Brancher le poste à l’ordinateur puis démarrer le K5 tout en appuyant sur le bouton PTT
     * Puis, led allumée fixe, transférer le firmware vers le K5 via le Flasher en ligne ou K5prog-win (lien en fin de doc).
     * Si vous vous apprêtez à remplacer le firmware d’usine, il est recommandé de sauvegarder préalablement vos configuration et calibration à l’aide de K5prog (voir par exemple la vidéo de F5SVP)
-    * **A faire en premier à chaque nouvelle version du firmware :** Executer DEFAUT PARAMS dans le menu du spectre.
+    * A chaque montée de version du FW les paramètres du spectre sont réinitialisés
 
 
 - **Prise en main rapide :**
-    * Les menus cachés : les menus peu utilisés ont été cachés dans une optique de simplification. Pour afficher le menu complet, il suffit de démarrer le poste en pressant SIDE KEY 1
-    * La programmation avec Chirp : le driver à utiliser pour dialoguer avec le poste sous Robzyl est à télécharger (lien en fin de doc). Attention de ne pas être en mode spectre pour pouvoir communiquer avec le PC.
+    * Les menus cachés : les menus peu utilisés ont été cachés dans une optique de simplification. Pour afficher le menu complet, il suffit de démarrer le poste en pressant 0.
+    * La programmation avec Chirp : le driver à utiliser pour dialoguer avec le poste sous Robzyl est à télécharger (lien en fin de doc). Attention de ne pas être en mode spectre pour pouvoir communiquer avec le PC. Attention à la version version 8k et 512k selon votre EEPROM.
     * Restauration du dernier état : suite à l’arrêt du K5, son redémarrage reprend dans le mode actif à son extinction en tenant compte de vos derniers paramètres de spectre sauvegardés.
     * Les principales fonctionnalités propres au firmware Robzyl sont décrites dans la suite de ce document. Pour les fonctions de base du K5, veuillez vous reporter à sa documentation.
 
@@ -116,13 +117,13 @@ Ecran principal :
 
 - Ligne 1 :
     * Type de spectre : SL (Scan Listes), FQ (Plage de fréquences), BD (Bandes => le code bande apparait en 1er)
-    * Valeur trigger UP Uxxx du squelch (valeur de déclenchement sur signal montant)
+    * Valeur trigger UP Uxx du squelch (valeur de déclenchement sur signal montant)
     * Délai de capture du RSSI d’un signal de 0 à 12 ms. Permet d’accélérer la vitesse de scan, mais cela réduit le rapport signal sur bruit.
     * Modulation courant FM/AM/USB
     * Niveau de la batterie
 - Ligne 2/3/4 : Fréquence en cours et CTCSS/DCS. Affichage pouvant varier selon le type de spectre et l'option d'affichage retenue (1/2/3 lignes).
 - Corps : Représentation graphique et dynamique des canaux analysés avec leur niveau de signal.
-- Ligne 5 : Etendue en cours et infos complémentaires : BL (une blacklist de fréquences est en cours).
+- Ligne 5 : Etendue en cours et pic de fréquence.
 
 ### Affectation des touches
 
@@ -161,9 +162,13 @@ Ecran principal :
 - Modulation : FM/AM/USB
 - DEFAUT PARAMS et touche 3 pour réinitialiser les paramètres du spectre ainsi que les registres.
 - RX_Backlight_ON permet d'activer le backlight en réception spectre
-- Freq counting: l'historique compte le nombre de réceptions d'une fréquence, Time counting compte le temps écoulé en réception de la fréquence
-- CLEAR HISTORY: efface l'historique de l'EEPROM (version 512k)
-- FREE RAM: indique la mémoire disponible
+- Freq counting : l'historique compte le nombre de réceptions d'une fréquence, Time counting compte le temps écoulé en réception de la fréquence
+- CLEAR HISTORY : efface l'historique de l'EEPROM (version 512k)
+- FREE RAM : indique la mémoire disponible
+- PowerSave : permet d'augmenter de délai de réactualisation du spetre sur l'écran LCD
+- Noislvl_OFF : permet d'ajuster de u nivea de bruit pour éviter des déclenchemets découtes intempestives.
+- POPUPS : règle le délai d'affiche des messages en sur-impression
+- U00_trigger : voir si dessous Historique.
 
 ### Vue simplifiée
 
@@ -175,7 +180,7 @@ Cet écran offre une vue plus synthétique du scan en cours tout en permettant l
 
 <img width="512" height="320" alt="screenshot_2025-10-05_14-36-09-820Z" src="https://github.com/user-attachments/assets/857d8dd4-fa79-4507-ab95-2946183717ec" />
 
-Le monitor se lance avec la touche M sur une fréquence en écoute.
+Le monitor se lance avec la touche M sur une fréquence en écoute. Sur cet écran certains registres sont modifiables pour les utilisateurs avancés.
 
 ### Historique des fréquences
 
@@ -183,8 +188,13 @@ Le monitor se lance avec la touche M sur une fréquence en écoute.
 
 L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, on passe en frequency lock et on peut écouter directement les fréquences stockées (comme une radio FM qui balaye et enregistre des fréquences) 
 touche M pour passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
+La touche 2 permet de sauvegarder l'entrée d'historique selectionnée dans la première mémoire disponible.
+La touche 3 d'effacer l'entrée de l'historique.
+La touche 3 d'effacer l'entrée de l'historique.
 La touche 7 permet de sauvegarder l'historique en EEPROM (version 512k)
 La touche 8 permet d'effacer l'historique en mémoire, mais pas en EEPROM
+
+Il existe un mode spécial de scan en valeur U00 (juste avant la valeur U0). Ce mode permet de collecter très rapiement un historique sans s'arrêter en écoute, c'est le paramètre U00_trigger du menu du spectre qui permet d'ajuster un niveau seuil de déclenchement des signaux à historiser.
 
 ### Conseils
 
@@ -199,7 +209,7 @@ La touche 8 permet d'effacer l'historique en mémoire, mais pas en EEPROM
 - Lancement : Depuis le mode VFO/MR, touche F+4
 - Utilisation et Conseils :
   - Préalablement les fréquences en mémoires doivent avoir été affectées à une scanlist (ex. SL1 = PMR, SL2 = Répéteurs, SL3=Aéro, etc.)
-  - A la première utilisation, passer dans chaque SL (^/v) pour ajuster les paramètres de squelch U puis mémoriser vos valeurs avec la touche 7. 
+  - A la première utilisation, vous pouvez naviguer dans chaque SL (^/v) pour ajuster les paramètres de squelch U puis mémoriser vos valeurs avec la touche 7. 
   - Enfin charger vos SL dans le spectre via le menu de sélection en touche 4.
 
 <img width="512" height="320" alt="screenshot_2025-10-05_14-38-50-421Z" src="https://github.com/user-attachments/assets/eea95ec1-ad3f-4342-a4b2-7ecbe41d024a" />
@@ -253,7 +263,7 @@ Les modulations parmis:
 
 <img width="741" height="130" alt="bands h" src="https://github.com/user-attachments/assets/dc352144-cb45-4a49-b9cb-8a8375f98935" />
 
-De la même manière qu’en mode SL, il est demandé à la 1ère utilisation de paramétrer et sauvegarder la valeurs du squelch sur les bandes qui vous intéressent. Touches ^/v pour naviguer dans les bandes.
+De la même manière qu’en mode SL, il est possible à la 1ère utilisation de paramétrer et sauvegarder la valeurs du squelch sur les bandes qui vous intéressent. Touches ^/v pour naviguer dans les bandes.
 
 Ensuite le menu touche 4 permet de choisir les bandes à analyser de la même manière que le menu en mode SL :
 
@@ -270,17 +280,17 @@ Ensuite le menu touche 4 permet de choisir les bandes à analyser de la même ma
 - Enfin, flashez le fichier de calibration (my_calibration.bin) (allumez la radio en mode simple). 
 - Utilisez k5prog.
 
-
+## Puissances
+- Low : puissance difficielemtn mesurable, exprimable en milliwatts, convoent pour faire des tests de proximité entre radios 
+- Mid : puissances situées entre 2 à 3W selons les bandes VHF ou UHF
+- Hight : puissance maximakeS proposées par le matériel, soit en moyenne 5W
 
 ## FAQ
 
-- Est-il possible de verrouiller son K5 en bande PMR uniquement ? :
-Oui : Affichage menus cachés, menu No 48, valeur PMR446 ONLY.
+- Est-il possible de verrouiller son K5 en bande PMR uniquement ? : Oui : Affichage menus cachés, menu No 48, valeur PMR446 ONLY.
 
-- Le firmware est-il compatible avec les mod SI4732 ? :
-Non
+- Le firmware est-il compatible avec les mod SI4732 ? : Non, mais cerains développeurs s'y interessent :)
 
-- Le firmware est-il compatible avec les mod EEPROM ? :
-Oui 2 versions existent: 8k et 512k pour les K5 modifiés
+- Le firmware est-il compatible avec les mod EEPROM ? : Oui 2 versions existent: 8k et 512k pour les K5 modifiés
 
 
