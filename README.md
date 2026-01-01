@@ -58,7 +58,19 @@ Réglage MaxListenTime – Ajustez le temps maximum d'écoute avant relance du b
 😜 Bips Mario, Pac-Man, R2D2 et Roger
 
 
-## 🔥 Nouveautés V5.5.0
+## 🔥 Nouveautés V6_TURBO
+
+<img width="120" height="120" alt="0-logo v6_turbo" src="https://github.com/user-attachments/assets/1f3a87fc-46a8-4132-a874-d56aa87eb5e7" />
+
+grosse refonte graphique complète des écrans principaux !!!
+Réallocation des touches dans les écrans VFO/MR : 
+- Appui long 4/5/6/0 pour régler BANDWITH/STEP/POWER/MODULATION
+- F + 7/8/9 pour lancer le spectre en mode SCANLIST/BANDLIST/FREQUENCE
+Passage de spectre vers VFO (touche PTT), les valeurs de LNA sont récupérées
+1000 entrées en historiques pour la version EERPROM 8K
+Tuning et correctifs divers
+
+## Nouveautés V5.5.0
 
 Gestion de 1000 canaux avec la version 512k, nécessite un changement d'EEPROM.
 Correction touche.
@@ -97,13 +109,13 @@ Ces modes sont accessibles alternativement par un appui long sur la touche 3. En
 
 ### Mode VFO
 
-<img width="512" height="320" alt="screenshot_2025-10-04_21-30-50-553Z" src="https://github.com/user-attachments/assets/0834c2ce-2328-4c7b-851f-890313e5dcc2" />
+<img width="512" height="320" alt="2-VFO" src="https://github.com/user-attachments/assets/b22aa54a-6bd5-4d00-9600-564f20f88325" />
 
 Le mode simple VFO permet de saisir librement une fréquence. Le menu touche M donne accès à tous les paramètres de step, modulation, etc.
 
 ### Mode Mémoire
 
-<img width="512" height="320" alt="screenshot_2025-10-04_21-32-11-731Z" src="https://github.com/user-attachments/assets/deaa65fd-f563-43cc-8d43-6f67e6e871ff" />
+<img width="512" height="320" alt="1-MR" src="https://github.com/user-attachments/assets/069a11e4-e81d-4670-9d12-cf08a2ac43df" />
 
 Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K5. Cette banque est à préparer et à injecter dans le K5 depuis Chirp.
 
@@ -113,17 +125,17 @@ Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K
 
 Ecran principal :
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-28-17-315Z" src="https://github.com/user-attachments/assets/6cce5d99-b7c2-4144-aecf-852e9f1d6629" />
+<img width="512" height="320" alt="3-spectre vue 1" src="https://github.com/user-attachments/assets/f7f1c0d7-538a-4fbd-8bb2-68a64e8bea8a" />
 
-- Ligne 1 :
-    * Type de spectre : SL (Scan Listes), FQ (Plage de fréquences), BD (Bandes => le code bande apparait en 1er)
+- Ligne haute :
+    * Type de spectre : SL (Scan Lists), FQ (Fréquences avoisinantes au VFO), BD (Bandes => le code bande apparait en 1er), RG (Plage si définie via le menu)
     * Valeur trigger UP Uxx du squelch (valeur de déclenchement sur signal montant)
     * Délai de capture du RSSI d’un signal de 0 à 12 ms. Permet d’accélérer la vitesse de scan, mais cela réduit le rapport signal sur bruit.
     * Modulation courant FM/AM/USB
     * Niveau de la batterie
-- Ligne 2/3/4 : Fréquence en cours et CTCSS/DCS. Affichage pouvant varier selon le type de spectre et l'option d'affichage retenue (1/2/3 lignes).
-- Corps : Représentation graphique et dynamique des canaux analysés avec leur niveau de signal.
-- Ligne 5 : Etendue en cours et pic de fréquence.
+- Cadre 1 : 2 affichages possibles des information de fréquence en cours en presant 8
+- Cadre 2 : Représentation graphique et dynamique des canaux analysés avec leur niveau de signal.
+- Ligne basse : Etendue en cours et pic de fréquence au centre.
 
 ### Affectation des touches
 
@@ -132,7 +144,7 @@ Ecran principal :
 - Touche 3 : Sélection de la largeur de bande d’écoute
 - Touche 4 : Menu de choix mono ou multiple SL/BD
 - Touche 5 : Accès aux Paramètres, puis ^/v pour naviguer, 1/3 pour changer des valeurs, 1/M pour saisir Fstart/Fstop.
-- Touche 6 : Navigation dans les modes SL/BD/RG/FQ
+- Touche 6 : Navigation dans les modes SL/BD/FQ
 - Touche 7 : Sauvegarde des principaux paramètres
 - Touche 8 : Options d'affichage N lignes 
       * rien
@@ -142,15 +154,15 @@ Ecran principal :
       * 3 lignes: ajout dernière fréquence reçue.
 - Touche 9 : Choix de la modulation
 - Touche 0 : Accès à l’écran d'historique
-- Touche M : Passage en Monitoring sur une fréquence
-- SIDE KEY 1 : Passer du mode Normal à FL (verrouillage de fréquence puis Monitor)
+- Touche M : Passage en "still mode" (monitoring)
+- SIDE KEY 1 : Passer du mode Normal à FL (verrouillage de fréquence puis Monitor) et à M (monitoring)
 - SIDE KEY 2 : Blacklister une fréquence à l’écouter
 - Touche \*/F : Réglage squelch paramètre Uxxx
 - Touche ^/v : Naviguer dans les SL ou les bandes.  
 
 ### Menu des paramètres
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-32-13-994Z" src="https://github.com/user-attachments/assets/9078e00c-1f75-4392-a601-f3609348f452" />
+<img width="512" height="320" alt="4-Menu" src="https://github.com/user-attachments/assets/752c4f6d-6626-4798-9886-c95ca67700de" />
 
 - RSSI Delay : temps de capture du RSSI en ms. Une valeur trop faible peut faire rater des signaux.
 - SpectrumDelay : Permet de définir le temps d’attente sur un signal à l’écoute et retombé sous le squelch. Si la valeur est à l’infini : pressez la touche Exit pour quitter l’écran d’écoute.
@@ -166,25 +178,25 @@ Ecran principal :
 - CLEAR HISTORY : efface l'historique de l'EEPROM (version 512k)
 - FREE RAM : indique la mémoire disponible
 - PowerSave : permet d'augmenter de délai de réactualisation du spetre sur l'écran LCD
-- Noislvl_OFF : permet d'ajuster de u nivea de bruit pour éviter des déclenchemets découtes intempestives.
+- Noislvl_OFF : permet d'ajuster de niveau de bruit à prendre en compte pour éviter des déclenchemets d'écoutes intempestives.
 - POPUPS : règle le délai d'affiche des messages en sur-impression
 - U00_trigger : voir si dessous Historique.
 
 ### Vue simplifiée
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-34-58-915Z" src="https://github.com/user-attachments/assets/e8695e3a-1f62-4036-8a89-6981e7c63f9c" />
+<img width="512" height="320" alt="5-spectre simplifé" src="https://github.com/user-attachments/assets/cf74343c-cc15-4a25-95e4-eca36844a643" />
 
 Cet écran offre une vue plus synthétique du scan en cours tout en permettant le réglage aisé des paramètres de squelch.
 
-### Monitoring de fréquence
+### Still mode (monitoring de fréquence)
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-36-09-820Z" src="https://github.com/user-attachments/assets/857d8dd4-fa79-4507-ab95-2946183717ec" />
+<img width="512" height="320" alt="6-Mode still" src="https://github.com/user-attachments/assets/6c8e06e8-dabb-450f-b95a-aeac241ed38a" />
 
 Le monitor se lance avec la touche M sur une fréquence en écoute. Sur cet écran certains registres sont modifiables pour les utilisateurs avancés.
 
 ### Historique des fréquences
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-38-50-421Z" src="https://github.com/user-attachments/assets/5627c391-008e-4442-af0d-c41065b5d612" />
+<img width="512" height="320" alt="7-Historique" src="https://github.com/user-attachments/assets/f9090de3-a594-4e61-a2d6-7b41627531e8" />
 
 L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, on passe en frequency lock et on peut écouter directement les fréquences stockées (comme une radio FM qui balaye et enregistre des fréquences) 
 touche M pour passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
@@ -212,7 +224,7 @@ Il existe un mode spécial de scan en valeur U00 (juste avant la valeur U0). Ce 
   - A la première utilisation, vous pouvez naviguer dans chaque SL (^/v) pour ajuster les paramètres de squelch U puis mémoriser vos valeurs avec la touche 7. 
   - Enfin charger vos SL dans le spectre via le menu de sélection en touche 4.
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-38-50-421Z" src="https://github.com/user-attachments/assets/eea95ec1-ad3f-4342-a4b2-7ecbe41d024a" />
+<img width="512" height="320" alt="8-SL sel menu" src="https://github.com/user-attachments/assets/1f7e690b-b5b3-4cdd-a84d-899616d78f8e" />
 
 On navigue dans ce menu avec les touches ^/v
   - Touche 5 : choisir une SL en excluant les autres
@@ -241,25 +253,8 @@ Les SL choisies apparaissent avec un symbole \*. Puis faire Exit pour lancer le 
 ### Exemple de fichier de configuration
 Les fréquences sont définies en 10 Hz 144MHz s'écrit 14400000.
 Il y a 32 bandes max et le nom fait maximum 12 caractères
-Les steps sont à choisir parmis:
-  S_STEP_0_01kHz,
-  S_STEP_0_1kHz,
-  S_STEP_0_5kHz,
-  S_STEP_1_0kHz,
-  S_STEP_2_5kHz,
-  S_STEP_5_0kHz,
-  S_STEP_6_25kHz,
-  S_STEP_8_33kHz,
-  S_STEP_10_0kHz,
-  S_STEP_12_5kHz,
-  S_STEP_25_0kHz,
-  S_STEP_100kHz,
-  S_STEP_500kHz,
-
-Les modulations parmis:
-	MODULATION_FM,
-	MODULATION_AM,
-	MODULATION_SSB,
+Les steps sont à choisir parmis: S_STEP_0_01kHz, S_STEP_0_1kHz, S_STEP_0_5kHz, S_STEP_1_0kHz, S_STEP_2_5kHz, S_STEP_5_0kHz, S_STEP_6_25kHz, S_STEP_8_33kHz, S_STEP_10_0kHz, S_STEP_12_5kHz, S_STEP_25_0kHz, S_STEP_100kHz, S_STEP_500kHz.
+Les modulations parmis: MODULATION_FM, MODULATION_AM, MODULATION_SSB.
 
 <img width="741" height="130" alt="bands h" src="https://github.com/user-attachments/assets/dc352144-cb45-4a49-b9cb-8a8375f98935" />
 
@@ -267,7 +262,7 @@ De la même manière qu’en mode SL, il est possible à la 1ère utilisation de
 
 Ensuite le menu touche 4 permet de choisir les bandes à analyser de la même manière que le menu en mode SL :
 
-<img width="512" height="320" alt="screenshot_2025-10-05_14-44-35-765Z" src="https://github.com/user-attachments/assets/938d3712-3cd3-4588-8c66-cb17d3016c6f" />
+<img width="512" height="320" alt="9-BD sel menu" src="https://github.com/user-attachments/assets/c81a3d8b-eddf-49a7-a8ac-2adae633c6cc" />
 
 ## Procédure de restauration
 - Utiliser l'archive Rollback.zip
