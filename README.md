@@ -62,7 +62,7 @@ Réglage MaxListenTime – Ajustez le temps maximum d'écoute avant relance du b
 
 <img width="120" height="120" alt="0-logo v6_turbo" src="https://github.com/user-attachments/assets/1f3a87fc-46a8-4132-a874-d56aa87eb5e7" />
 
-Grosse refonte graphique complète des écrans principaux !!!
+Refonte graphique complète des écrans principaux !
 
 Réallocation des touches dans les écrans VFO/MR :
 - Appui long 4/5/6/0 pour régler BANDWITH/STEP/POWER/MODULATION
