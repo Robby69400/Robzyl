@@ -197,12 +197,12 @@ Le monitor se lance avec la touche M sur une fréquence en écoute. Sur cet écr
 <img width="512" height="320" alt="7-Historique" src="https://github.com/user-attachments/assets/f9090de3-a594-4e61-a2d6-7b41627531e8" />
 
 L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, la radio passe en frequency lock (FL) et on peut écouter directement les fréquences stockées (comme une radio FM qui balaye et enregistre des fréquences) 
-Touche M pour passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
-La touche 2 permet de sauvegarder l'entrée d'historique selectionnée dans la première mémoire disponible.
-La touche 3 d'effacer l'entrée de l'historique.
-La touche 5 de scanner les entrées de l'historique
-La touche 7 de sauvegarder l'historique en EEPROM (version 512k)
-La touche 8 d'effacer l'historique en mémoire, mais pas en EEPROM
+- Touche M : passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO
+- Touche 2 : sauvegarder l'entrée d'historique selectionnée dans la première mémoire disponible
+- Touche 3 : effacer l'entrée de l'historique
+- Touche 5 : scanner les entrées de l'historique
+- Touche 7 : sauvegarder l'historique en EEPROM (version 512k)
+- Touche 8 : effacer l'historique en mémoire, mais pas en EEPROM
 
 Il existe un mode spécial de scan en valeur U00 (juste avant la valeur U0). Ce mode permet de collecter très rapiement un historique sans s'arrêter en écoute, c'est le paramètre U00_trigger du menu du spectre qui permet d'ajuster un niveau seuil de déclenchement des signaux à historiser.
 
