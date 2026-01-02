@@ -1,6 +1,6 @@
 ># [**Translate 🌐**](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/Robby69400/Robzyl_K5/)
 # Firmware Quansheng UV-K5 - Robzyl
-## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: International, France, Pologne, Roumanie, Turquie, Russie, Tchequie. Ces bandes peuvent se personnaliser, me contacter sur Telegram.
+## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes: International, France, Pologne, Roumanie, Turquie, Russie, Tchequie, Brésil. Ces bandes peuvent se personnaliser, me contacter sur Telegram.
 ### 🙏 Many thanks to Zylka, Kolyan, Iggy, Toni, Yves and Francois
 
 <h2><a href="https://www.youtube.com/@robby_69400" rel="nofollow">🗲Youtube</a></h2>
@@ -106,19 +106,19 @@ Nouveaux paramètres dans le menu [5]:
 
 ## Les modes VFO et Mémoire
 
-Ces modes sont accessibles alternativement par un appui long sur la touche 3. En haut de l'écran, 3 niveaux sont reportés : GL Glitch, RS RSSI et NO Noise. Puis en partie latérale drite, le niveau de l'audio.
+Ces modes sont accessibles alternativement par un appui long sur la touche 3. Sur ces écrans, les touches 4/5/6/0 en appui long permettent de régler BANDWITH/STEP/POWER/MODULATION. Le menu en touche M donne également accès à tous ces paramètres. En récéption, il appartait un timer de temps d'écoute.
 
-### Mode VFO
+### VFO MODE
 
 <img width="512" height="320" alt="2-VFO" src="https://github.com/user-attachments/assets/b22aa54a-6bd5-4d00-9600-564f20f88325" />
 
-Le mode simple VFO permet de saisir librement une fréquence. Le menu touche M donne accès à tous les paramètres de step, modulation, etc.
+Le mode simple VFO permet de saisir librement une fréquence. En récéption, il apparait à l'écran la valmur d'AFC (info de décalage de fréquence), la valeur du S mètre et la puissance du signal en dBm.
 
-### Mode Mémoire
+### MR MODE (Mémoires)
 
 <img width="512" height="320" alt="1-MR" src="https://github.com/user-attachments/assets/069a11e4-e81d-4670-9d12-cf08a2ac43df" />
 
-Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K5. Cette banque est à préparer et à injecter dans le K5 depuis Chirp.
+Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K5 8K (ou 999 pour le K5 512K). Cette banque est à préparer et à injecter dans la radio depuis Chirp (driver 8k ou 512k). En récéption, il apparait à l'écran la valeur du S mètre et la puissance du signal en dBm.
 
 ## Le mode spectre
 
@@ -129,34 +129,31 @@ Ecran principal :
 <img width="512" height="320" alt="3-spectre vue 1" src="https://github.com/user-attachments/assets/f7f1c0d7-538a-4fbd-8bb2-68a64e8bea8a" />
 
 - Ligne haute :
-    * Type de spectre : SL (Scan Lists), FQ (Fréquences avoisinantes au VFO), BD (Bandes => le code bande apparait en 1er), RG (Plage si définie via le menu)
+    * Type de spectre : SL (Scan Lists), FQ (Fréquences avoisinantes au VFO), BD (Bandes => le code bande pays apparait en 1er), RG (Plage si définie via le menu)
     * Valeur trigger UP Uxx du squelch (valeur de déclenchement sur signal montant)
-    * Délai de capture du RSSI d’un signal de 0 à 12 ms. Permet d’accélérer la vitesse de scan, mais cela réduit le rapport signal sur bruit.
-    * Modulation courant FM/AM/USB
+    * Délai de capture du RSSI d’un signal allant de 0 à 12 ms. Permet d’accélérer la vitesse de scan, mais cela réduit le rapport signal sur bruit.
+    * Modulation courante FM/AM/USB
     * Niveau de la batterie
-- Cadre 1 : 2 affichages possibles des information de fréquence en cours en presant 8
+- Cadre 1 : 2 affichages possibles des informations liées à la fréquence en cours en presant 8
 - Cadre 2 : Représentation graphique et dynamique des canaux analysés avec leur niveau de signal.
 - Ligne basse : Etendue en cours et pic de fréquence au centre.
 
 ### Affectation des touches
 
-- Touche 1 : Passer une fréquence à l’écouter (« skip »)
-- Touche 2 : Accès à l’écran simplifié de type scanner simple
+- Touche 1 : Passer une fréquence à l’écoute (« skip »)
+- Touche 2 : Accès à l’écran simplifié façon scanner simple
 - Touche 3 : Sélection de la largeur de bande d’écoute
 - Touche 4 : Menu de choix mono ou multiple SL/BD
-- Touche 5 : Accès aux Paramètres, puis ^/v pour naviguer, 1/3 pour changer des valeurs, 1/M pour saisir Fstart/Fstop.
+- Touche 5 : Accès aux Paramètres, puis ^/v pour naviguer, 1/3 pour changer des valeurs, 1/M pour saisir Fstart/Fstop (RG mode).
 - Touche 6 : Navigation dans les modes SL/BD/FQ
 - Touche 7 : Sauvegarde des principaux paramètres
-- Touche 8 : Options d'affichage N lignes 
-      * rien
-      * 1 ligne grande fréquence 
-      * 1 ligne petite fréquence et ctcss ou DCS
-      * 2 lignes: ajout mode et canal
-      * 3 lignes: ajout dernière fréquence reçue.
+- Touche 8 : 2 Options d'affichage N lignes 
+      * Fréquence seule grande taille + info canal 
+      * Fréquence + info canal + timer d'écoute (petite taille).
 - Touche 9 : Choix de la modulation
 - Touche 0 : Accès à l’écran d'historique
-- Touche M : Passage en "still mode" (monitoring)
-- SIDE KEY 1 : Passer du mode Normal à FL (verrouillage de fréquence puis Monitor) et à M (monitoring)
+- Touche M : Passage en still mode (monitoring et accès régistres)
+- SIDE KEY 1 : Passer du mode Normal à FL (verrouillage de fréquence puis Monitor) et à M (écoute ouverte)
 - SIDE KEY 2 : Blacklister une fréquence à l’écouter
 - Touche \*/F : Réglage squelch paramètre Uxxx
 - Touche ^/v : Naviguer dans les SL ou les bandes.  
@@ -169,8 +166,8 @@ Ecran principal :
 - SpectrumDelay : Permet de définir le temps d’attente sur un signal à l’écoute et retombé sous le squelch. Si la valeur est à l’infini : pressez la touche Exit pour quitter l’écran d’écoute.
 - Max listen Time: temps maximum d'écoute d'une fréquence reçue.
 - PTT (Option de passage en émission) : LAST RECEIVED = dernière fréquence entendue, LAST VFO FREQ = fréquence en VFO, NINJA MODE : Mode de communication expérimental par saut de fréquence à chaque PTT entre 2 K5 utilisant le spectre en mode Ninja sur une Scanlist commune. Voir vidéo sur YouTube.
-- Fstart/Fstop : paramétrage des fréquence ^/v en mode FR.
-- Step : paramétrage de la canalisation des fréquences en mode FR.
+- Fstart/Fstop : paramétrage des fréquence ^/v (mode RG).
+- Step : paramétrage de la canalisation des fréquences.
 - ListenBW : paramétrage de la largeur de la bande d’écoute.
 - Modulation : FM/AM/USB
 - DEFAUT PARAMS et touche 3 pour réinitialiser les paramètres du spectre ainsi que les registres.
@@ -199,21 +196,22 @@ Le monitor se lance avec la touche M sur une fréquence en écoute. Sur cet écr
 
 <img width="512" height="320" alt="7-Historique" src="https://github.com/user-attachments/assets/f9090de3-a594-4e61-a2d6-7b41627531e8" />
 
-L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, on passe en frequency lock et on peut écouter directement les fréquences stockées (comme une radio FM qui balaye et enregistre des fréquences) 
-touche M pour passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
+L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, la radio passe en frequency lock (FL) et on peut écouter directement les fréquences stockées (comme une radio FM qui balaye et enregistre des fréquences) 
+Touche M pour passer en Frequency Lock puis monitoring sur la fréquence. Et touche PTT pour copier la fréquence vers le mode VFO.
 La touche 2 permet de sauvegarder l'entrée d'historique selectionnée dans la première mémoire disponible.
 La touche 3 d'effacer l'entrée de l'historique.
-La touche 3 d'effacer l'entrée de l'historique.
-La touche 7 permet de sauvegarder l'historique en EEPROM (version 512k)
-La touche 8 permet d'effacer l'historique en mémoire, mais pas en EEPROM
+La touche 5 de scanner les entrées de l'historique
+La touche 7 de sauvegarder l'historique en EEPROM (version 512k)
+La touche 8 d'effacer l'historique en mémoire, mais pas en EEPROM
 
 Il existe un mode spécial de scan en valeur U00 (juste avant la valeur U0). Ce mode permet de collecter très rapiement un historique sans s'arrêter en écoute, c'est le paramètre U00_trigger du menu du spectre qui permet d'ajuster un niveau seuil de déclenchement des signaux à historiser.
 
 ### Conseils
 
 - La valeurs de réglage du squelch dépend de votre environnement, de votre antenne et de votre choix de délai RSSI.
-- RSSI Delay : commencer par exemple à 5 ms et ajuster jusqu'à obtenir un bon compromis entre vitesse et réception.
+- RSSI Delay : commencer par exemple à 3 ms et ajuster jusqu'à obtenir un bon compromis entre vitesse et réception.
 - Trigger Up Uxxx : commencer par exemple à 5 et ajuster jusqu’à ne plus recevoir de bruits
+- Noise level (Noislvl) : commencer par exmeple à 60 et ajuster por limiter les faux signaux.
 
 
 ## Spectre sur les ScanLists (mode SL)
@@ -277,9 +275,9 @@ Ensuite le menu touche 4 permet de choisir les bandes à analyser de la même ma
 - Utilisez k5prog.
 
 ## Puissances
-- Low : puissance difficielemtn mesurable, exprimable en milliwatts, convoent pour faire des tests de proximité entre radios 
+- Low : puissance difficielement mesurable, exprimable en milliwatts, convient pour faire des tests de proximité entre radios 
 - Mid : puissances situées entre 2 à 3W selons les bandes VHF ou UHF
-- Hight : puissance maximakeS proposées par le matériel, soit en moyenne 5W
+- Hight : puissance maximales proposées par le matériel, soit en moyenne 5W
 
 ## FAQ
 
