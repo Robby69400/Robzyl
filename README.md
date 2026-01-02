@@ -60,7 +60,7 @@ Réglage MaxListenTime – Ajustez le temps maximum d'écoute avant relance du b
 
 ## 🔥 Nouveautés V6_TURBO
 
-<img width="120" height="120" alt="0-logo v6_turbo" src="[https://github.com/user-attachments/assets/1f3a87fc-46a8-4132-a874-d56aa87eb5e7](https://github.com/user-attachments/assets/1f3a87fc-46a8-4132-a874-d56aa87eb5e7)" />
+<img width="120" height="120" alt="0-logo v6_turbo" src="https://github.com/user-attachments/assets/1f3a87fc-46a8-4132-a874-d56aa87eb5e7" />
 
 Refonte graphique complète des écrans principaux !
 
@@ -113,13 +113,13 @@ Ces modes sont accessibles alternativement par un appui long sur la touche 3. Su
 
 ### VFO MODE
 
-<img width="512" height="320" alt="2-VFO" src="[https://github.com/user-attachments/assets/b22aa54a-6bd5-4d00-9600-564f20f88325](https://github.com/user-attachments/assets/b22aa54a-6bd5-4d00-9600-564f20f88325)" />
+<img width="512" height="320" alt="2-VFO" src="https://github.com/user-attachments/assets/b22aa54a-6bd5-4d00-9600-564f20f88325" />
 
 Le mode simple VFO permet de saisir librement une fréquence. En réception, il apparaît à l'écran la valeur d'AFC (info de décalage de fréquence), la valeur du S-mètre et la puissance du signal en dBm.
 
 ### MR MODE (Mémoires)
 
-<img width="512" height="320" alt="1-MR" src="[https://github.com/user-attachments/assets/069a11e4-e81d-4670-9d12-cf08a2ac43df](https://github.com/user-attachments/assets/069a11e4-e81d-4670-9d12-cf08a2ac43df)" />
+<img width="512" height="320" alt="1-MR" src="https://github.com/user-attachments/assets/069a11e4-e81d-4670-9d12-cf08a2ac43df" />
 
 Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K5 8K (ou 999 pour le K5 512K). Cette banque est à préparer et à injecter dans la radio depuis Chirp (driver 8k ou 512k). En réception, il apparaît à l'écran la valeur du S-mètre et la puissance du signal en dBm.
 
@@ -129,7 +129,7 @@ Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K
 
 Écran principal :
 
-<img width="512" height="320" alt="3-spectre vue 1" src="[https://github.com/user-attachments/assets/f7f1c0d7-538a-4fbd-8bb2-68a64e8bea8a](https://github.com/user-attachments/assets/f7f1c0d7-538a-4fbd-8bb2-68a64e8bea8a)" />
+<img width="512" height="320" alt="3-spectre vue 1" src="https://github.com/user-attachments/assets/f7f1c0d7-538a-4fbd-8bb2-68a64e8bea8a" />
 
 * Ligne haute :
 * Type de spectre : SL (Scan Lists), FQ (Fréquences avoisinantes au VFO), BD (Bandes => le code bande pays apparaît en 1er), RG (Plage si définie via le menu).
@@ -165,7 +165,7 @@ Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K
 
 ### Menu des paramètres
 
-<img width="512" height="320" alt="4-Menu" src="[https://github.com/user-attachments/assets/752c4f6d-6626-4798-9886-c95ca67700de](https://github.com/user-attachments/assets/752c4f6d-6626-4798-9886-c95ca67700de)" />
+<img width="512" height="320" alt="4-Menu" src="https://github.com/user-attachments/assets/752c4f6d-6626-4798-9886-c95ca67700de" />
 
 * RSSI Delay : temps de capture du RSSI en ms. Une valeur trop faible peut faire rater des signaux.
 * SpectrumDelay : Permet de définir le temps d’attente sur un signal à l’écoute ayant chuté sous le squelch. Si la valeur est à l’infini : pressez la touche Exit pour quitter l’écran d’écoute.
@@ -187,19 +187,19 @@ Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K
 
 ### Vue simplifiée
 
-<img width="512" height="320" alt="5-spectre simplifé" src="[https://github.com/user-attachments/assets/cf74343c-cc15-4a25-95e4-eca36844a643](https://github.com/user-attachments/assets/cf74343c-cc15-4a25-95e4-eca36844a643)" />
+<img width="512" height="320" alt="5-spectre simplifé" src="https://github.com/user-attachments/assets/cf74343c-cc15-4a25-95e4-eca36844a643" />
 
 Cet écran offre une vue plus synthétique du scan en cours tout en permettant le réglage aisé des paramètres de squelch.
 
 ### Still mode (monitoring de fréquence)
 
-<img width="512" height="320" alt="6-Mode still" src="[https://github.com/user-attachments/assets/6c8e06e8-dabb-450f-b95a-aeac241ed38a](https://github.com/user-attachments/assets/6c8e06e8-dabb-450f-b95a-aeac241ed38a)" />
+<img width="512" height="320" alt="6-Mode still" src="https://github.com/user-attachments/assets/6c8e06e8-dabb-450f-b95a-aeac241ed38a" />
 
 Le monitor se lance avec la touche M sur une fréquence en écoute. Sur cet écran, certains registres sont modifiables pour les utilisateurs avancés.
 
 ### Historique des fréquences
 
-<img width="512" height="320" alt="7-Historique" src="[https://github.com/user-attachments/assets/f9090de3-a594-4e61-a2d6-7b41627531e8](https://github.com/user-attachments/assets/f9090de3-a594-4e61-a2d6-7b41627531e8)" />
+<img width="512" height="320" alt="7-Historique" src="https://github.com/user-attachments/assets/f9090de3-a594-4e61-a2d6-7b41627531e8" />
 
 L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, la radio passe en Frequency Lock (FL) et on peut écouter directement les fréquences stockées (comme une radio FM qui balaie et enregistre des fréquences).
 
@@ -230,7 +230,7 @@ Il existe un mode spécial de scan en valeur U00 (juste avant la valeur U0). Ce 
 
 
 
-<img width="512" height="320" alt="8-SL sel menu" src="[https://github.com/user-attachments/assets/1f7e690b-b5b3-4cdd-a84d-899616d78f8e](https://github.com/user-attachments/assets/1f7e690b-b5b3-4cdd-a84d-899616d78f8e)" />
+<img width="512" height="320" alt="8-SL sel menu" src="https://github.com/user-attachments/assets/1f7e690b-b5b3-4cdd-a84d-899616d78f8e" />
 
 On navigue dans ce menu avec les touches ^/v.
 
@@ -268,13 +268,13 @@ Il y a 32 bandes max et le nom fait maximum 12 caractères.
 Les steps sont à choisir parmi : S_STEP_0_01kHz, S_STEP_0_1kHz, S_STEP_0_5kHz, S_STEP_1_0kHz, S_STEP_2_5kHz, S_STEP_5_0kHz, S_STEP_6_25kHz, S_STEP_8_33kHz, S_STEP_10_0kHz, S_STEP_12_5kHz, S_STEP_25_0kHz, S_STEP_100kHz, S_STEP_500kHz.
 Les modulations parmi : MODULATION_FM, MODULATION_AM, MODULATION_SSB.
 
-<img width="741" height="130" alt="bands h" src="[https://github.com/user-attachments/assets/dc352144-cb45-4a49-b9cb-8a8375f98935](https://github.com/user-attachments/assets/dc352144-cb45-4a49-b9cb-8a8375f98935)" />
+<img width="741" height="130" alt="bands h" src="https://github.com/user-attachments/assets/dc352144-cb45-4a49-b9cb-8a8375f98935" />
 
 De la même manière qu’en mode SL, il est possible à la 1ère utilisation de paramétrer et sauvegarder la valeur du squelch sur les bandes qui vous intéressent. Touches ^/v pour naviguer dans les bandes.
 
 Ensuite, le menu touche 4 permet de choisir les bandes à analyser de la même manière que le menu en mode SL :
 
-<img width="512" height="320" alt="9-BD sel menu" src="[https://github.com/user-attachments/assets/c81a3d8b-eddf-49a7-a8ac-2adae633c6cc](https://github.com/user-attachments/assets/c81a3d8b-eddf-49a7-a8ac-2adae633c6cc)" />
+<img width="512" height="320" alt="9-BD sel menu" src="https://github.com/user-attachments/assets/c81a3d8b-eddf-49a7-a8ac-2adae633c6cc" />
 
 ## Procédure de restauration (en particulier retour de FAGCI, IJV et KARINA)
 
