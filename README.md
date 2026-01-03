@@ -71,6 +71,8 @@ Réallocation des touches dans les écrans VFO/MR :
 Passage du spectre vers VFO (touche PTT), les valeurs de LNA sont récupérées.
 1000 entrées d'historique pour la version EEPROM 8k.
 Tuning et correctifs divers.
+* Scan des fréquences de l'historique
+* U00 pour enregistrer l'historique non stop
 
 ## Nouveautés V5.5.0
 
@@ -160,7 +162,8 @@ Cet autre mode permet de naviguer dans la banque des 200 mémoires nommées du K
 * Touche M : Passage en Still mode (monitoring et accès registres).
 * SIDE KEY 1 : Passer du mode Normal à FL (verrouillage de fréquence puis Monitor) et à M (écoute ouverte).
 * SIDE KEY 2 : Blacklister une fréquence à l’écoute.
-* Touche */F : Réglage squelch paramètre Uxxx.
+* Touche */F : Réglage squelch paramètre Uxx. 
+  Si Uoo, enregistrment de l'historique sans s'arrêter
 * Touche ^/v : Naviguer dans les SL ou les bandes.
 
 ### Menu des paramètres
