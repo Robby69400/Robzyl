@@ -1,5 +1,5 @@
 ># [**Translate 🌐**](https://translate.google.com/translate?sl=auto&tl=en&u=https://github.com/Robby69400/Robzyl_K5/)
-# Firmware Quansheng UV-K5 - Robzyl
+# Firmware Robzyl pour Quansheng UV-K5 (V1) et K1
 
 ## Le logiciel est en anglais, les versions disponibles correspondent aux pays cibles pour les bandes : International, France, Pologne, Roumanie, Turquie, Russie, Tchéquie, Brésil. Ces bandes peuvent être personnalisées, me contacter sur Telegram.
 
@@ -10,6 +10,24 @@
 Désormais le code source sera accessible sur demande. Contactez-moi sur Telegram.
 
 # **Manuel Robzyl - Firmware Quansheng UV-K5**
+
+## 🔥 Nouveautés V6.6 pour K5 V1
+* Correction de l'historique
+* Option sounboost dans menu [5]
+* Spectre entrelacé par steps entre 0,5 kHz et 25 kHz pour améliorer la détection.
+  * exemple pour step de 6.25kHz on balaie 100 000 00, 100 025 00, 100 050 00, 100 075 00, 100 100 00, 100 125 00, 100 150 00, 100 175 00, 100 006 25 step 625 ici, 100 031 25, 100 056 25, 100 081 25...
+* Balayage du spectre toujours en FM.
+* Mode bench : utilisez [8] dans le spectre pour afficher la vitesse en canaux/s.
+* En mode STILL ([M] : réglage du pas avec */F, réglage de la fréquence avec HAUT/BAS ; le verrouillage de la fréquence ou la surveillance avec [SK1] est requis).
+* Auto Lock key dans le spectre [5]
+* Paramètre Glitch dans [5] pour amélirorer la sélectivité de réception en rejetant les parasites
+* Suppresion des click en réception du spectre
+## 🔥 Nouveautés V6.6 pour K1
+* Firmware basé sur H V5.1, Aircopy et jeu retirés.
+* Ajout améliorations de Mentanah
+* pas de RS232 mais USB pour charger chirp, démarrer avec [SK1] pour activer l'USB.
+* 800 mémoires et 20 scanlists
+* fonctionnalités du spectre quasi identiques à celles du K5.
 
 ## Introduction
 
@@ -58,7 +76,9 @@ Réglage MaxListenTime – Ajustez le temps maximum d'écoute avant relance du b
 😎 Mode Ninja : saut de fréquence sur votre K5.
 😜 Bips Mario, Pac-Man, R2D2 et Roger.
 
-## 🔥 Nouveautés V6_TURBO
+
+
+## Nouveautés V6_TURBO
 
 <img width="120" height="120" alt="0-logo v6_turbo" src="https://github.com/user-attachments/assets/1f3a87fc-46a8-4132-a874-d56aa87eb5e7" />
 
