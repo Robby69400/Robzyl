@@ -31,7 +31,6 @@
 *   **Fréquences à ignorer** : Possibilité de mettre en "blacklist" des fréquences bruyantes pour les sauter lors des prochains scans.
 
 **Modes Spécifiques et Ergonomie**
-*   **Mode Ninja** : Un mode de communication expérimental par **saut de fréquence** à chaque pression sur le PTT entre deux appareils équipés.
 *   **Affichage simplfié du spectre** : L'affichage par défaut est en histogrammes, mais il est également proposé un écran simplfié
 *   **Personnalisation sonore** : Ajout d'une option **Soundboost** et de bips de fin de transmission variés (Mario, Pac-Man, R2D2).
 
@@ -68,7 +67,6 @@ Avant toute installation d'un nouveau firmware sur une radio, il est **important
 3. Démarrer en pressant PTT, la radio passe en mode DFU (led blanche allumée fixe)
 4. Flasher la radio qui redemarrera en fin de mise à jour.
 
-
 ### 4.3 Configuration CHIRP
 1. Télécharger le driver Chirp_Robzyl_K1.py
 2. Brancher la radio au PC
@@ -86,6 +84,7 @@ Avant toute installation d'un nouveau firmware sur une radio, il est **important
 | **1-18** | Paramètres par canal |
 | **19-74** | Paramètres système | 
 
+Se référer au guide pour les détaisl concernant chaque pas de menu.
 
 ## 6. Raccourcis clavier
 
@@ -116,7 +115,6 @@ Avant toute installation d'un nouveau firmware sur une radio, il est **important
 ✅ Bandes MONDIALES (tous pays en 1 firmware)
 ✅ Précis, rapide et fluide
 
-### 7.2 Modes disponibles
 | Mode | Description |
 |---------|-------------|
 | **BANDE** | 50 bandes mondiales prédéfinies (HAM, AIR, SATCOM, etc.)|
@@ -124,17 +122,17 @@ Avant toute installation d'un nouveau firmware sur une radio, il est **important
 | **RANGE** | Spectre sur bornes de fréquence début / fin |
 | **FREQUENCE** | Spectre centrée sur la fréquence en VFO |
 
-### 7.3 Utilisation pratique
+### 7.2 Utilisation pratique
 
 **Lancement du spectre** : Fn+5 depuis le VFO.
 
+[*IMAGE ECRAN PRINCIPAL*]
+
+* Ligne supérieure : DSxx valeur de DynamicSquel, Modulation, largeur de bande d'écoute, step de canalisation (ou A+XXXX en écoute, valeur AFC)
+* Ligne 2-2 : Affichage fréquence en cours et selon le mode la scan-list ou la bande 
+* Ligne basse : Étendue en cours et pic de fréquence au centre.
+
 **Affectation des touches :**
-
-
-| Pas de menu | Fonction | 
-|---------------------|---------------|
-| **1-18** | Paramètres par canal |
-| **19-74** | Paramètres système | 
 
 |Touche | Fonction | 
 |---------------------|---------------|
@@ -154,10 +152,107 @@ Avant toute installation d'un nouveau firmware sur une radio, il est **important
 | ***/F** | Réglage squelch dynamqiue Uxx
 | **< >** | Naviguation dans les SL, les bandes, ou en fréquence.
 
----
+**Menu des paramètres :**
 
-## 📱 Support
+[*IMAGE ECRAN PARAM*]
+
+* RSSI Delay : temps de capture du RSSI en ms. 
+* SpectrumDelay : Permet de définir le temps d’attente sur un signal à l’écoute ayant chuté sous le squelch. Si la valeur est à l’infini : pressez la touche Exit pour quitter l’écran d’écoute.
+* Max Listen Time : temps maximum d'écoute d'une fréquence reçue.
+* Fstart/Fstop : paramétrage des fréquences ^/v (mode RG).
+* Step : paramétrage de la canalisation des fréquences.
+* ListenBW : paramétrage de la largeur de la bande d’écoute.
+* Modulation : FM/AM/USB.
+* RX_Backlight_ON : permet d'activer le rétroéclairage en réception spectre.
+* PowerSave : permet d'augmenter le délai de réactualisation du spectre sur l'écran LCD.
+* Noislvl_OFF : permet d'ajuster le niveau de bruit à prendre en compte pour éviter des déclenchements d'écoutes intempestifs.
+* Popups : règle le délai d'affichage des messages en surimpression.
+* Record  Trig : pour enregistrer l'historique non stop.
+* Key Unlocked : verouillage automatique du clavier.
+* GlitchMax : niveau de rejet du bruit.
+* SoundBoostON : augmente le niveau sonore mais également le risque de distortion.
+* Clear History : efface l'historique de l'EEPROM.
+* Reset Default : réinitialise les paramètres du spectre ainsi que les registres.
+
+**Vue simplifiée :**
+
+[*IMAGE ECRAN SIMPLIFIE*]
+
+Cet écran offre une vue synthétique du scan en cours.
+
+**Still mode (monitoring de fréquence) :**
+
+[*IMAGE ECRAN STILL*]
+
+Le monitor se lance avec la touche M sur une fréquence en écoute. Sur cet écran, certains registres sont modifiables pour les utilisateurs avancés.
+
+**Historique des fréquences :**
+
+[*IMAGE ECRAN HISTO*]
+
+L'historique évolue dynamiquement au gré des fréquences reçues. Il est possible de naviguer dans la liste, la radio passe en Frequency Lock (FL) et on peut écouter directement les fréquences stockées (comme une radio FM qui balaie et enregistre des fréquences).
+
+* Touche M : passer en Frequency Lock puis monitoring sur la fréquence. Touche PTT pour copier la fréquence vers le mode VFO.
+* Touche 2 : sauvegarder l'entrée d'historique sélectionnée dans la première mémoire disponible.
+* Touche 3 : effacer l'entrée de l'historique.
+* Touche 5 : scanner les entrées de l'historique.
+* Touche 7 : sauvegarder l'historique en EEPROM (version 512k).
+* Touche 8 : effacer l'historique en mémoire, mais pas en EEPROM.
+
+Il existe un mode spécial de scan en valeur U00 (juste avant la valeur U0). Ce mode permet de collecter très rapidement un historique sans s'arrêter en écoute ; c'est le paramètre U00_trigger du menu du spectre qui permet d'ajuster un niveau seuil de déclenchement des signaux à historiser.
+
+## Spectre sur les ScanLists (mode SL)
+
+* Fonction : Permet de charger dans le spectre les mémoires affectées à des scanlists.
+* Lancement : Depuis le mode VFO/MR, touche F+4.
+* Utilisation et conseils :
+* Préalablement, les fréquences en mémoires doivent avoir été affectées à une scanlist (ex. SL1 = PMR, SL2 = Répéteurs, SL3 = Aéro, etc.).
+* À la première utilisation, vous pouvez naviguer dans chaque SL (^/v) pour ajuster les paramètres de squelch U, puis mémoriser vos valeurs avec la touche 7.
+* Enfin, chargez vos SL dans le spectre via le menu de sélection en touche 4.
+
+[*IMAGE ECRAN SEL SL*]
+
+On navigue dans ce menu avec les touches ^/v.
+
+* Touche 5 : choisir une SL en excluant les autres.
+* Touche 4 : choisir/invalider une ou plusieurs SL.
+* Touche * : affichage des mémoires affectées à la SL sélectionnée.
+
+Les SL choisies apparaissent avec un symbole *. Puis faire Exit pour lancer le spectre. Touche 7 pour enregistrer sa configuration.
+
+# Spectre sur plage de fréquences (mode FQ) :
+
+* Fonction : Permet d’analyser une gamme de fréquences à partir d’une fréquence centrale ou bien à partir d’une étendue définie.
+* Lancement : Depuis le mode VFO/MR, touche F+5.
+* Utilisation et conseils :
+* La fréquence issue du VFO/MR est portée au spectre en tant que fréquence centrale. Ensuite, vous pouvez agir sur le paramétrage de votre spectre selon vos besoins en step, modulation, etc. (Réglages touche 5).
+* L’étendue des fréquences basse/haute peut être ajustée dans le menu via les paramètres FStart/FStop. Sur ces paramètres, faire 1 pour accéder à la saisie et M pour valider (touche * pour la virgule).
+* Ajuster votre squelch.
+
+
+## Spectre sur les bandes prédéfinies (mode BD)
+
+* Fonction : Permet d’analyser en spectre des bandes prédéfinies (ex. PMR, CB, AERO, HAM, etc.).
+* Lancement : Depuis le mode VFO/MR, touche F+6.
+* Il est possible de paramétrer 32 bandes.
+
+Ensuite, le menu touche 4 permet de choisir les bandes à analyser de la même manière que le menu en mode SL :
+
+[*IMAGE ECRAN SEL BD*]
+
+## 8. Procédure de restauration (en particulier retour de FAGCI, IJV et KARINA)
+
+* Utiliser l'archive `Rollback.zip`.
+* Commencez par flasher le fichier (`ROLLBACK.bin`) en mode simple.
+* Après le flashage, éteignez la radio, maintenez le bouton 7 enfoncé, puis rallumez-la.
+* Attendez que la mémoire soit effacée.
+* Flashez ensuite le firmware d'origine (`K6 v3.00.19_publish.bin`).
+* Après le flashage, effectuez une réinitialisation complète via le menu.
+* Enfin, flashez le fichier de calibration (`my_calibration.bin`) (allumez la radio en mode simple).
+* Utilisez k5prog.
+
+
+## 9. 📱 Code et discussions
+
 - **GitHub** : https://github.com/Robby69400/Robzyl_K1
-- **Groupe FB** : UV-K5 UV-K1 France
-
-**Version doc** : 1.0 - 08/03/2026
+- **Telegram** : [Telegram Robzyl](https://t.me/k5robby69)
